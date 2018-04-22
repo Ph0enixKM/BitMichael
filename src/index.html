@@ -15,35 +15,70 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <style media="screen">
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      color: #aaa
+    }
+    iframe{
+      border: none;
+      border-bottom-left-radius: 5%;
+      border-bottom-right-radius: 5%;
+    }
+    nav {
+      height: 60px;
+      width: 100vw;
+      text-align: center;
+      font-family: "Open Sans", Verdana, sans-serif;
+      vertical-align: middle;
+      display: flex;
+      background-image: url("assets/imgs/bitfun.png");
+      background-position: center;
+      background-size: 50px 50px;
+      background-repeat: no-repeat;
+    }
+    span {
+      display: inline-block;
+      background-color: #222;
+      color: #aaa;
+      border-radius: 15px;
+      width: 20vw;
+      margin: 2vw;
+      transition: 300ms;
+      cursor: pointer;
+      outline: none;
+      opacity: 1
+    }
+    span:hover{
+      transform: scale(1.1);
+    }
+    span d {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+    nav p {
+      flex: 1;
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      height: 20px;
+      margin: 0;
+      transform: translate(0,-50%);
+      font-size: 20px;
+      color: white;
+    }
+  </style>
+
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
-
-  <!-- un-comment this code to enable service worker
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
-        .catch(err => console.error('Error', err));
-    }
-  </script>-->
-
-  <link href="build/main.css" rel="stylesheet">
-
 </head>
-<body>
-
-  <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
-
-  <!-- The polyfills js is generated during the build process -->
-  <script src="build/polyfills.js"></script>
-
-  <!-- The vendor js is generated during the build process
-       It contains all of the dependencies in node_modules -->
-  <script src="build/vendor.js"></script>
-
-  <!-- The main bundle js is generated during the build process -->
-  <script src="build/main.js"></script>
-
+  <ion-content ion-fixed>
+    <script src="assets/js/script.js"></script>
+  </ion-content>
 </body>
 </html>
